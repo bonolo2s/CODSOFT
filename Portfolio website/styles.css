@@ -186,6 +186,11 @@ h3:nth-of-type(2){
 .portfolio-container{
     display: flex;
     justify-content: center;
+    opacity: 0;
+    animation: slideFromBtm 1s ease forwards;
+    animation-timeline: view();
+    animation-range-start: 100px;
+    animation-range-end: 500px;
 }
 .slider{
     width: 1000px;
