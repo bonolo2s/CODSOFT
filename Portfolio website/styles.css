@@ -26,7 +26,7 @@ p{
     color: white;
 }
 .btn{
-    background-color: rgb(91, 158, 216);
+    background-color: rgb(61, 134, 199);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -51,7 +51,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding:1% 5%;
-    background-color: rgb(73, 158, 233);
+    background-color: rgb(61, 134, 199);
 }
 .logo{
     width: 130px;
@@ -99,13 +99,16 @@ nav{
     font-size: 80px;
     animation: slideRight 1s ease forwards;
 }
-#intor h2:nth-of-type(2){
+#intro h2:nth-of-type(2){
     animation: slideLeft 1s ease forwards;
 }
 
 h3{
     color: white;
     font-size: 40px;
+    animation: slideUp 1s ease forwards;
+}
+h3:nth-of-type(2){
     animation: slideBottom 1s ease forwards;
 }
 
@@ -184,7 +187,7 @@ h3{
 .contactLinks{
     color: black;
     font-size: 30px;
-    background-color: rgb(86, 156, 218);
+    background-color: rgb(61, 134, 199);
     padding: 10px;
     border-radius: 50%;
     transition: all 0.5s ease;
@@ -269,3 +272,45 @@ h3{
     }
     
 }
+
+/*KEY FRAMES*/
+@keyframes slideUp {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideBottom {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-500px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

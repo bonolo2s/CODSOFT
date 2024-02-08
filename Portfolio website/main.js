@@ -6,5 +6,3 @@ var typed = new Typed(".roles",{
     loop: true
   })
   
-
-const menu = document.getElementById(menuIcon)
