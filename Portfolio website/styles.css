@@ -6,6 +6,7 @@
 body{
     background-image: url(assets/background1.webp);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 h1{
     color: white;
@@ -43,7 +44,7 @@ header{
     top: 0;
     right: 0;
     left: 0;
-    background-color: beige;
+    z-index: 100000000000;
 }
 nav{
     display: flex;
@@ -59,6 +60,7 @@ nav{
 .navLinkscontainer{
     display: flex;
     justify-content: space-between;
+    animation: slideLinks 1s ease;
 }
 .navLinkscontainer li{
     list-style: none;
@@ -93,14 +95,21 @@ nav{
 #intro{
     width: 65%;
 }
+.txtIntro p{
+    text-align: left;
+    font-size: 20px;
+    margin: 30px 0;
+    animation: slideIn 2s ease forwards; 
+    z-index: 0;
+}
 
 #intro h2{
     color: white;
     font-size: 80px;
-    animation: slideRight 1s ease forwards;
+    animation: slideRight 2s ease  forwards ;
 }
 #intro h2:nth-of-type(2){
-    animation: slideLeft 1s ease forwards;
+    animation: slideLeft 2s ease forwards;
 }
 
 h3{
@@ -131,16 +140,34 @@ h3:nth-of-type(2){
 
 /*About styles*/
 .about-container{
-    display: flex;
+    display: flex;/*
+    transform: translateX(-100%);*/
 }
 .about-container div{
     flex: 1;
     margin: 10px;
+    opacity: 0;
+
+}
+.about-container div:nth-of-type(1){
+    animation: slideFromBtm 1s ease forwards;
+    animation-timeline: view();
+    animation-range-start: 100px;
+    animation-range-end: 500px;
+
+}
+.about-container div:nth-of-type(2){
+    animation: slideFromBtm 1s ease forwards;
+    animation-timeline: view();
+    animation-range-start: 300px;
+    animation-range-end: 500px;
+
 }
 .myImg{
     width: 250px;
     border-radius: 10px;
 }
+
 
 /*Skills styles*/
 .skills-container{
@@ -313,4 +340,37 @@ h3:nth-of-type(2){
       transform: translateX(0);
       opacity: 1;
     }
+  }
+  @keyframes slideIn {
+    0%{
+        opacity: 0;
+        transform: translateX(+100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  @keyframes slideFromBtm {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes slideLinks {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
   }
