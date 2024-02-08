@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url(assets/background1.webp);
+    background-attachment: fixed;
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+}
+h3{
+    color: white;
+}
+#about,#skills,#portfolio,#reviews,#contact{
+    padding: 6% 5% 0;
+    min-height: 100vh;/*
+    background-color: aliceblue;*/
+}
+p{
+    font-size: 18px;
+    color: white;
+}
+.btn{
+    background-color: rgb(91, 158, 216);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.btn:hover{
+    background-color: rgb(20, 90, 182);
+}
+
+
+/*Navbar styles*/
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: beige;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:1% 5%;
+    background-color: rgb(73, 158, 233);
+}
+.logo{
+    width: 130px;
+}
+.navLinkscontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.navLinkscontainer li{
+    list-style: none;
+    margin: 0 5px;
+}
+
+.navLinkscontainer li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.navLinkscontainer li a:hover{
+    color: rgb(15, 126, 223);/*ill need that thing og before*/
+}
+.hidden-nav-container{
+    display: none;
+}
+#menuIcon{
+    display: none;
+}
+
+/*HOME STYLES*/
+#home{
+    padding: 8% 5%;/*
+    background-color: aliceblue;
+    min-height: 100vh;*/
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#intro{
+    width: 65%;
+}
+
+#intro h2{
+    color: white;
+    font-size: 80px;
+    animation: slideRight 1s ease forwards;
+}
+#intor h2:nth-of-type(2){
+    animation: slideLeft 1s ease forwards;
+}
+
+h3{
+    color: white;
+    font-size: 40px;
+    animation: slideBottom 1s ease forwards;
+}
+
+.roles{
+    color: rgb(0, 0, 0);
+}
+
+.learnMoreBtn{
+    padding: 10px 20px;
+    background-color: rgb(17, 126, 221);
+    border-radius: 5px ;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.learnMoreBtn:hover{
+    background-color: rgb(0, 95, 179);
+    padding: 10px 20px;
+}
+
+/*About styles*/
+.about-container{
+    display: flex;
+}
+.about-container div{
+    flex: 1;
+    margin: 10px;
+}
+.myImg{
+    width: 250px;
+    border-radius: 10px;
+}
+
+/*Skills styles*/
+.skills-container{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+.skillItem{
+    width: 30%;
+}
+.skillImg{
+    width: 100%;
+}
+
+/*Portfolio styles*/
+.portfolio-container{
+    display: flex;
+    justify-content: center;
+}
+.slider{
+    width: 1000px;
+    height: 450px;
+    display: flex;
+    overflow-x: scroll;
+}
+.sliderItem{
+    min-width: 350px;
+    margin: 15px;
+}
+.portfolioImg{
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*Contact styles*/
+.contact-container{
+    display: flex;
+    align-items: center;
+}
+.contact-container div{
+    flex: 1;
+    margin: 0 20px;
+}
+.contactLinks{
+    color: black;
+    font-size: 30px;
+    background-color: rgb(86, 156, 218);
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+
+}
+.contactLinks:hover{
+    color: black;
+    font-size: 30px;
+    background-color: rgb(10, 69, 121);
+    padding: 10px;
+    border-radius: 50%;
+
+}
+
+
+/*RESPONSIVENESS*/
+@media (max-width:600px) {
+    /*Navbar styles*/
+    .logo{
+        width: 100px;
+    }
+    .navLinkscontainer{
+        display: none;
+    }
+    #menuIcon{
+        display: block;
+    }
+    .hidden-nav-container{
+        display: block;
+    }
+    /*HOME STYLES*/
+    #home{
+        padding: 100px 5% 0;
+        min-height: 100vh;
+    }
+    #intro{
+        width: 100%;
+    }
+
+    /*About styles*/
+    .about-container{
+        flex-direction: column;
+    }
+
+    /*Skills styles*/
+    .skills-container{
+        flex-direction: column;
+    }
+    .skillItem{
+        width: 100%;
+        margin: 20px 0;
+    }
+    /*Contact styles*/
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-container div{
+        flex: 1;
+        margin: 20px 0;
+    }
+}
+
+@media (min-width:768px) {
+    /*HOME STYLES*/
+    #home{
+        padding: 40% 5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*HOME STYLES*/
+    #home{
+        padding: 8% 5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    
+    /*HOME STYLES*/
+    #home{
+        padding: 14% 5%;
+    }
+    
+}
