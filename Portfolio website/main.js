@@ -18,4 +18,9 @@ var typed = new Typed(".roles",{
     }
   });*/
   
-  
+  const menuIcon = document.querySelector('.menuIcon');
+  menuIcon.addEventListener('click', function() {
+    const menuLinks = document.querySelector('.hidden-nav-container');
+    menuLinks.classList.toggle('open')
+    this.classList.toggle('open');
+  });

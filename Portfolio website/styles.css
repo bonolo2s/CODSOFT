@@ -79,7 +79,7 @@ nav{
 .hidden-nav-container{
     display: none;
 }
-#menuIcon{
+.menuIcon{
     display: none;
     font-size: 2rem;
 }
@@ -308,17 +308,36 @@ h3:nth-of-type(2){
     .navLinkscontainer{
         display: none;
     }
-    #menuIcon{
+    .menuIcon{
         display: block;
+        transform: rotate(0);
+        transition: all 0.5s ease;
+    }
+    .menuIcon.open{
+        display: block;
+        transform: rotate(45deg);
     }
     .hidden-nav-container{
+        padding: 0 5%;
+        background-color: rgb(175, 144, 224);
+        height: 250px;
         display: block;
-        padding: 10px;
-        background-color: aliceblue;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
     }
     .hidden-nav-container.open{
-        display: block;
+        height: 250px;
     }
+    .hidden-nav-container li{
+        list-style: none;
+        margin: 10px 0;
+    }
+    .hidden-nav-container li a{
+        text-decoration: none;
+        color: black;
+    }
+
     /*HOME STYLES*/
     #home{
         padding: 100px 5% 0;
@@ -345,7 +364,7 @@ h3:nth-of-type(2){
         flex-direction: column;
     }
     .skillsCol{
-        background-color: white;
+        background-color: grey;
         margin: 15px 0;
         padding: 10px;
         border-radius: 10px;
