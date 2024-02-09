@@ -81,6 +81,7 @@ nav{
 }
 #menuIcon{
     display: none;
+    font-size: 2rem;
 }
 
 /*HOME STYLES*/
@@ -94,6 +95,7 @@ nav{
 }
 #intro{
     width: 65%;
+    margin: 0 auto;
 }
 .txtIntro p{
     text-align: left;
@@ -152,14 +154,14 @@ h3:nth-of-type(2){
 .about-container div:nth-of-type(1){
     animation: slideFromBtm 1s ease forwards;
     animation-timeline: view();
-    animation-range-start: 100px;
+    animation-range-start: 50px;
     animation-range-end: 500px;
 
 }
 .about-container div:nth-of-type(2){
     animation: slideFromBtm 1s ease forwards;
     animation-timeline: view();
-    animation-range-start: 300px;
+    animation-range-start: 180px;
     animation-range-end: 500px;
 
 }
@@ -206,7 +208,26 @@ h3:nth-of-type(2){
     width: 100%;
     border-radius: 5px;
 }
-
+.skillsRow{
+    display: flex;
+    justify-content: center;
+}
+.skillsCol{
+    background-color: white;
+    margin: 15px 25px;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 250px;
+    width: 250px;
+}
+.skillsCol h2{
+    color: black;
+    font-size: 2rem;
+}
+.skillsCol p{
+    color: black;
+    font-size: 18px;
+}
 /*Contact styles*/
 .contact-container{
     display: flex;
@@ -249,6 +270,11 @@ h3:nth-of-type(2){
     }
     .hidden-nav-container{
         display: block;
+        padding: 10px;
+        background-color: aliceblue;
+    }
+    .hidden-nav-container.open{
+        display: block;
     }
     /*HOME STYLES*/
     #home{
@@ -272,6 +298,18 @@ h3:nth-of-type(2){
         width: 100%;
         margin: 20px 0;
     }
+    .skillsRow{
+        flex-direction: column;
+    }
+    .skillsCol{
+        background-color: white;
+        margin: 15px 0;
+        padding: 10px;
+        border-radius: 10px;
+        min-height: 250px;
+        width: 95%;
+    }
+
     /*Contact styles*/
     .contact-container{
         flex-direction: column;
@@ -287,12 +325,52 @@ h3:nth-of-type(2){
     #home{
         padding: 40% 5%;
     }
+
+    /*Portfolio styles*/
+    .skillsRow{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .skillsCol{
+        background-color: white;
+        margin: 15px 25px;
+        padding: 40px;
+        border-radius: 10px;
+        min-height: 250px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 1000px) {
+    /*Portfolio styles*/
+    .skillsRow{
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .skillsCol{
+        background-color: white;
+        margin: 15px 25px;
+        padding: 25px;
+        border-radius: 10px;
+        min-height: 250px;
+        width: 200px;
+    }
 }
 
 @media (min-width: 1200px) {
     /*HOME STYLES*/
     #home{
         padding: 8% 5%;
+    }
+    /*Portfolio styles*/
+    .skillsCol{
+        background-color: white;
+        margin: 15px 25px;
+        padding: 40px;
+        border-radius: 10px;
+        min-height: 250px;
+        width: 250px;
     }
 }
 
@@ -301,8 +379,7 @@ h3:nth-of-type(2){
     /*HOME STYLES*/
     #home{
         padding: 14% 5%;
-    }
-    
+    } 
 }
 
 /*KEY FRAMES*/
