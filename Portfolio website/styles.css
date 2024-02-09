@@ -139,6 +139,11 @@ h3:nth-of-type(2){
     background-color: rgb(0, 95, 179);
     padding: 10px 20px;
 }
+.arrowDown{
+    text-align: start;
+    margin: 30px 0;
+    animation: Float 2s ease  infinite forwards;
+}
 
 /*About styles*/
 .about-container{
@@ -285,6 +290,12 @@ h3:nth-of-type(2){
     padding: 10px;
     border-radius: 50%;
 
+}
+.contactDetails{
+    text-align: start;
+}
+.contactDetails div{
+    margin: 10px;
 }
 
 
