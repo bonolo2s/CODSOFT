@@ -183,6 +183,26 @@ h3:nth-of-type(2){
 .skillImg{
     width: 100%;
 }
+.skillsRow{
+    display: flex;
+    justify-content: center;
+}
+.skillsCol{
+    background-color: grey;
+    margin: 15px 25px;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 250px;
+    width: 250px;
+}
+.skillsCol h2{
+    color: black;
+    font-size: 2rem;
+}
+.skillsCol p{
+    color: black;
+    font-size: 18px;
+}
 
 /*Portfolio styles*/
 .portfolio-container{
@@ -203,31 +223,43 @@ h3:nth-of-type(2){
 .sliderItem{
     min-width: 350px;
     margin: 15px;
+    position: relative;
+}
+.sliderItem h2{
+    color: black;
+    font-size: 2rem;
+}
+.hidden-description{
+    background-color: rgb(175, 144, 224);
+    opacity: 0.8;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 28px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.hidden-description p{
+    font-size: 18px;
+    color: black;
+}
+.sliderItem:hover>.hidden-description{
+    height: 82%;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.FloatingArrow{
+    font-size: 30px;
+    color: black;
+    animation: Float 2s ease  infinite forwards;
 }
 .portfolioImg{
     width: 100%;
     border-radius: 5px;
 }
-.skillsRow{
-    display: flex;
-    justify-content: center;
-}
-.skillsCol{
-    background-color: white;
-    margin: 15px 25px;
-    padding: 40px;
-    border-radius: 10px;
-    min-height: 250px;
-    width: 250px;
-}
-.skillsCol h2{
-    color: black;
-    font-size: 2rem;
-}
-.skillsCol p{
-    color: black;
-    font-size: 18px;
-}
+
 /*Contact styles*/
 .contact-container{
     display: flex;
@@ -349,7 +381,7 @@ h3:nth-of-type(2){
         justify-content: center;
     }
     .skillsCol{
-        background-color: white;
+        background-color: grey;
         margin: 15px 25px;
         padding: 25px;
         border-radius: 10px;
@@ -365,7 +397,7 @@ h3:nth-of-type(2){
     }
     /*Portfolio styles*/
     .skillsCol{
-        background-color: white;
+        background-color: grey;
         margin: 15px 25px;
         padding: 40px;
         border-radius: 10px;
@@ -455,4 +487,19 @@ h3:nth-of-type(2){
         transform: translateX(0);
     }
     
+  }
+
+  @keyframes Float {
+    0%{
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(10px);
+        opacity: 2;
+    }
   }
