@@ -19,72 +19,79 @@
 
                         
                             <div class="btn">
-                                <button>C</button>
+                                <button onclick="display.value = '' " >C</button>
                             </div>
                             <div class="btn">
-                                <button>÷</button>
+                                <button onclick="display.value += '/' " >÷</button>
                             </div>
                             <div class="btn">
-                                <button>×</button>
+                                <button onclick="display.value += '*' ">×</button>
                             </div>
                             <div class="btn">
-                                <button>←</button>
+                                <button onclick="display.value = display.value.toString().slice(0,-1) ">←</button>
                             </div>
                         
                             <div class="btn">
-                                <button>7</button>
+                                <button onclick="display.value += '7' ">7</button>
                             </div>
                             <div class="btn">
-                                <button>8</button>
+                                <button onclick="display.value += '8' " >8</button>
                             </div>
                             <div class="btn">
-                                <button>9</button>
+                                <button onclick="display.value += '9' " >9</button>
                             </div>
                             <div class="btn">
-                                <button>-</button>
+                                <button onclick="display.value += '-' ">-</button>
                             </div>
 
  
                             <div class="btn">
-                                <button>4</button>
+                                <button onclick="display.value += '4' " >4</button>
                             </div>
                             <div class="btn">
-                                <button>5</button>
+                                <button onclick="display.value += '5' " >5</button>
                             </div>
                             <div class="btn">
-                                <button>6</button>
+                                <button onclick="display.value += '6' " > 6</button>
                             </div>
                             <div class="btn">
-                                <button>+</button>
+                                <button onclick="display.value += '+' ">+</button>
                             </div>
 
+
                             <div class="btn">
-                                <button>1</button>
+                                <button onclick="display.value += '1' ">1</button>
                             </div>
                             <div class="btn">
-                                <button>2</button>
+                                <button onclick="display.value += '2' ">2</button>
                             </div>
                             <div class="btn">
-                                <button>3</button>
+                                <button onclick="display.value += '3' ">3</button>
                             </div>
    
+
                             <div class="btn">
-                                <button>%</button>
+                                <!--<button onclick="" >%</button>-->
+                                <button onclick="display.value += '%' " >%</button>
                             </div>
                             <div class="btn">
-                                <button>.</button>
+                                <button onclick="display.value += '.' ">.</button>
                             </div>
                             <div class="btn">
-                                <button>0</button>
+                                <button onclick="display.value += '0' ">0</button>
                             </div>
                             <div id="equalityBtnContainer" >
-                                <button  id="equalityBtn">=</button>
+                                <button  id="equalityBtn" onclick="display.value = eval(display.value)">=</button>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="main.js" async defer></script>
+        <script>
+
+        </script>
     </body>
 </html>
