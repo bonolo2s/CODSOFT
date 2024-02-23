@@ -7,9 +7,4 @@ Welcome to my repository! This repository contains all the tasks I've been worki
 To view the full documentation of each task, navigate to the respective directory. Each directory contains a README file with detailed information about the task.
 
 ## Contributing
-
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This repository is for personal use and is not open for contributions. It serves as a platform for me to solidify my understanding in various areas.
